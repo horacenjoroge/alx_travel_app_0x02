@@ -1,49 +1,27 @@
-# ALX Travel App - Milestone 3
+# ALX Travel App 0x02 - Payment Integration
 
-## API Endpoints
+A Django-based travel booking application with integrated payment processing using the Chapa Payment Gateway.
 
-### Listings
-- `GET /api/listings/` - List all listings
-- `POST /api/listings/` - Create a new listing
-- `GET /api/listings/{id}/` - Retrieve a specific listing
-- `PUT /api/listings/{id}/` - Update a listing
-- `DELETE /api/listings/{id}/` - Delete a listing
+## Project Overview
 
-### Bookings
-- `GET /api/bookings/` - List all bookings
-- `POST /api/bookings/` - Create a new booking
-- `GET /api/bookings/{id}/` - Retrieve a specific booking
-- `PUT /api/bookings/{id}/` - Update a booking
-- `DELETE /api/bookings/{id}/` - Delete a booking
+This project extends the ALX Travel App by implementing secure payment functionality. Users can browse travel listings, create bookings, and complete payments through the Chapa API. The system handles payment initiation, verification, and sends automated confirmation emails upon successful transactions.
 
-## Setup Instructions
+## Features
 
-1. Install dependencies:
-```bash
-pip install -r requirement.txt
-```
+- **Travel Listings Management**: Browse and view available travel destinations
+- **Booking System**: Create bookings with check-in/check-out dates and guest counts
+- **Payment Integration**: Secure payment processing via Chapa Payment Gateway
+- **Payment Verification**: Automated verification of payment status
+- **Email Notifications**: Asynchronous email confirmations using Celery
+- **Transaction Tracking**: Complete payment history and status tracking
 
-2. Run migrations:
-```bash
-python manage.py makemigrations
-python manage.py migrate
-```
+## Technologies Used
 
-3. Create superuser:
-```bash
-python manage.py createsuperuser
-```
+- **Backend Framework**: Django 4.x
+- **Database**: PostgreSQL / SQLite
+- **Payment Gateway**: Chapa API
+- **Task Queue**: Celery with Redis
+- **API**: Django REST Framework
+- **Environment Management**: python-dotenv
 
-4. Run server:
-```bash
-python manage.py runserver
-```
-
-5. Access Swagger documentation:
-```
-http://localhost:8000/swagger/
-```
-
-## Testing with Postman
-
-Test each endpoint to ensure CRUD operations work correctly.
+## Project Structure
